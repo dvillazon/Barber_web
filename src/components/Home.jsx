@@ -30,7 +30,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="w-full relative overflow-hidden h-[600px]">
+    <section className="w-full relative overflow-hidden h-[750px]">
       {/* Carrusel que se mueve */}
       <div
         className="flex transition-transform duration-950 ease-in-out h-full cursor-default" 
@@ -57,9 +57,11 @@ const Home = () => {
 
       {/* Botón fijo encima del carrusel */}
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20">
+      <a href="https://wa.me/9626242317" target="_blank" rel="noopener noreferrer">
         <button className="bg-yellow-400 text-neutral-900 text-lg font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition cursor-pointer hover:scale-103">
           Agenda tu cita
         </button>
+        </a>
       </div>
     </section>
   );

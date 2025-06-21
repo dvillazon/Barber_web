@@ -4,12 +4,12 @@ import Navbar from './components/Navbar.jsx'
 import Home from './components/Home.jsx'
 const App = () => {
   return (
-    <div className=" flex flex-col items-center max-w-6xl mx-auto min-h-screen bg-neutral-800  shadow-2xl shadow-neutral-700"> 
+    <div className="flex flex-col items-center w-full max-w-6xl  md:w-auto sm:p-0 mx-auto min-h-screen bg-neutral-800  shadow-2xl shadow-neutral-700"> 
     <Navbar/>
-    <Home/>
-    <Card/>
-    <Card/>
-    <Card/>
+    <section id='inicio'> <Home/> </section>
+    <section id='card'> <Card/> </section>
+    <section id='card'> <Card/> </section>
+    <section id='card'> <Card/> </section>
     </div>
   )
 }
