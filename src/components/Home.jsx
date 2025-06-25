@@ -66,7 +66,7 @@ const Home = () => {
       {/* Botón fijo encima del carrusel */}
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20">
       <a href="https://wa.me/9626242317" target="_blank" rel="noopener noreferrer">
-        <button className="bg-yellow-400 text-neutral-900 text-lg font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition cursor-pointer hover:scale-103">
+        <button className="bg-yellow-400 text-neutral-900 text-lg font-extrabold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition cursor-pointer hover:scale-103 font-elegant duration-200">
           Agenda tu cita
         </button>
         </a>
@@ -74,16 +74,16 @@ const Home = () => {
       
     </section>
     <section className=' text-white py-5 flex flex-row gap-20 items-center justify-center opacity-80'>
-        <div className='flex flex-col items-center gap-6 '>
-          <FaPhone className='text-3xl text-neutral-200' />
+        <div className='flex flex-col items-center gap-4 '>
+          <FaPhone className='text-3xl text-neutral-100' />
           <p className=' text-xl text-yellow-300  font-sans '>+52 55 1234 5678</p>
         </div>
-        <div className='flex flex-col items-center gap-6'>
-          <FaLocationDot className='text-3xl' />
-          <p className=' text-xl text-yellow-300 font-sans'>Monterrey 159, esquina Zacatecas en Roma Norte</p>
+        <div className='flex flex-col items-center gap-4'>
+          <FaLocationDot className='text-3xl text-neutral-100' />
+          <p className=' text-xl text-yellow-300 font-elegant'>Monterrey 159, esquina Zacatecas en Roma Norte</p>
         </div>
-        <div className='flex flex-col items-center gap-6'>
-          <MdEmail className='text-3xl' />  
+        <div className='flex flex-col items-center gap-4'>
+          <MdEmail className='text-3xl text-neutral-100' />  
           <p className=' text-xl text-yellow-300 font-sans'>contacto@barberia.com</p>
         </div>
       </section>

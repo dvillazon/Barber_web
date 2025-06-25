@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { FaUserLarge } from "react-icons/fa6";
 const Navbar = () => {
   const [hidden, setHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -30,14 +29,29 @@ const Navbar = () => {
 >
   <div className="flex justify-between items-center max-w-6xl mx-auto px-4 py-4">
     <div className="text-yellow-400 text-2xl font-bold">Logo</div>
-    <ul className="flex space-x-6 text-lg font-medium text-white">
-      <li><a href="#inicio" className="hover:text-yellow-400">Inicio</a></li>
-      <li><a href="#acerca" className="hover:text-yellow-400">Acerca de nosotros</a></li>
-      <li><a href="#servicios" className="hover:text-yellow-400">Servicios</a></li>
-      <li><a href="#tienda" className="hover:text-yellow-400">Tienda</a></li>
-      <li><a href="#contacto" className="hover:text-yellow-400">Contacto</a></li>
-    </ul>
-    <div className="text-yellow-400 text-2xl cursor-pointer">Usuario</div>
+    <ul className="flex space-x-10 text-lg font-medium font-elegant text-white">
+  {[
+    { label: 'Inicio', href: '#inicio' },
+    { label: 'Acerca de nosotros', href: '#acerca' },
+    { label: 'Servicios', href: '#servicios' },
+    { label: 'Tienda', href: '#tienda' },
+    { label: 'Contacto', href: '#contacto' },
+  ].map((item, idx) => (
+    <li
+      key={idx}
+      className="transition-all duration-300 transform hover:scale-110"
+    >
+      <a
+        href={item.href}
+        className="hover:text-yellow-300 block"
+      >
+        {item.label}
+      </a>
+    </li>
+  ))}
+</ul>
+
+    <div className="text-yellow-300 text-2xl cursor-pointer px-2"><FaUserLarge /></div>
   </div>
 </nav>
 
