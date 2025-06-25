@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
+import { FaPhone , FaLocationDot} from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 const images = [
   {
     src: '/img1.jpeg',
@@ -30,29 +31,36 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="w-full relative overflow-hidden h-[750px]">
+    <>
+    <section className="w-full relative overflow-hidden h-[700px]">
       {/* Carrusel que se mueve */}
       <div
         className="flex transition-transform duration-950 ease-in-out h-full cursor-default" 
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
-        {images.map((image, idx) => (
-          <div key={idx} className="min-w-full relative">
-            <img
-              src={image.src}
-              alt={`Slide ${idx}`}
-              className="w-full h-full object-cover opacity-80"
-            />
-            <div className="flex flex-col absolute inset-0 items-center justify-center text-center">
-              <h2 className="text-5xl font-elegant text-white font-bold px-6 py-3 rounded-xl opacity-90">
-                {image.text}
-              </h2>
-              <p className="text-xl font-extralight font-elegant text-white mt-4 max-w-lg">
-                {image.description}
-              </p>
-            </div>
-          </div>
-        ))}
+       {images.map((image, idx) => (
+  <div key={idx} className="min-w-full relative h-full">
+    <img
+      src={image.src}
+      alt={`Slide ${idx}`}
+      className="w-full h-full object-cover opacity-80"
+    />
+
+    {/* Degradado en la parte inferior de la imagen */}
+    <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-neutral-800 to-transparent z-10" />
+
+    {/* Texto centrado, encima del degradado */}
+    <div className="flex flex-col absolute inset-0 items-center justify-center text-center z-20">
+      <h2 className="text-5xl font-elegant text-white font-bold px-6 py-3 rounded-xl opacity-90">
+        {image.text}
+      </h2>
+      <p className="text-xl font-extralight font-elegant text-white mt-4 max-w-lg">
+        {image.description}
+      </p>
+    </div>
+  </div>
+))}
+
       </div>
 
       {/* Botón fijo encima del carrusel */}
@@ -63,7 +71,23 @@ const Home = () => {
         </button>
         </a>
       </div>
+      
     </section>
+    <section className=' text-white py-5 flex flex-row gap-20 items-center justify-center opacity-80'>
+        <div className='flex flex-col items-center gap-6 '>
+          <FaPhone className='text-3xl text-neutral-200' />
+          <p className=' text-xl text-yellow-300  font-sans '>+52 55 1234 5678</p>
+        </div>
+        <div className='flex flex-col items-center gap-6'>
+          <FaLocationDot className='text-3xl' />
+          <p className=' text-xl text-yellow-300 font-sans'>Monterrey 159, esquina Zacatecas en Roma Norte</p>
+        </div>
+        <div className='flex flex-col items-center gap-6'>
+          <MdEmail className='text-3xl' />  
+          <p className=' text-xl text-yellow-300 font-sans'>contacto@barberia.com</p>
+        </div>
+      </section>
+      </>
   );
 };
 

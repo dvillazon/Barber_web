@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="flex flex-col items-center w-full max-w-6xl  md:w-auto sm:p-0 mx-auto min-h-screen bg-neutral-800  shadow-2xl shadow-neutral-700"> 
     <Navbar/>
-    <section id='inicio'> <Home/> </section>
+    <section id='inicio'> <Home/></section>
     <section id='card'> <Card/> </section>
     <section id='card'> <Card/> </section>
     <section id='card'> <Card/> </section>
