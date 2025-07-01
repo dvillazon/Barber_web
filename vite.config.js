@@ -7,4 +7,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+   server: {
+    allowedHosts: [
+      'tiiypg-ip-187-190-198-80.tunnelmole.net',
+      // también puedes agregar otros hosts aquí
+    ],
+  },
 })
